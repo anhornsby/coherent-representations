@@ -11,6 +11,8 @@ case "$1" in
     Rscript ~/politics/anova.R ~/data/politics/politics_data.csv "$2"
     # usage: simulation/ input_csv n output_location
     python ~/politics/ ~/data/politics/politics_data.csv "$2"
+    # the effect size plot
+    python ~/data/politics/effect_size_plot.py
     ;;
   robots)
     # Run the robot experiment analyses

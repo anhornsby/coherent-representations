@@ -20,7 +20,7 @@ RScript anova.R
 You can reproduce the other statistical results presented in the paper by running:
 
 ```bash
-python analyse.py
+python ./
 ```
 
 You can reproduce the effect size plot by running:

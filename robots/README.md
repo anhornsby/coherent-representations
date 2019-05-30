@@ -14,5 +14,5 @@ All non-native package versions are listed in `requirements.txt`.
 You can reproduce the statistical results and plots presented in the paper by running
 
 ```bash
-python analyse.py
+python ./
 ```

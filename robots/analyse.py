@@ -19,17 +19,17 @@ import logging
 from prepare import qa_results, prepare_modelling_data
 from plot import barplot, plot_trial_variability
 
-# CONFIG = {
-#     # input data
-#     'input_filename': '../data/robot_rerun_data_raw.csv', # the path to the data
+CONFIG = {
+    # input data
+    'input_filename': '../data/robot_rerun_data_raw.csv', # the path to the data
 
-#     # if rerun_data==True, then we are analysing data from the robot study re-run...
-#     # (i.e. breaking down by Democrat and Republican)
-#     'rerun_data': True, 
+    # if rerun_data==True, then we are analysing data from the robot study re-run...
+    # (i.e. breaking down by Democrat and Republican)
+    'rerun_data': True, 
 
-#     # output path
-#     'plot_savepath': './plots/', # the path to save the plots
-# }
+    # output path
+    'plot_savepath': './plots/', # the path to save the plots
+}
 
 
 def initialise_logger():
@@ -178,7 +178,3 @@ def main(config):
                 '{0:s}{1:s}_{2:s}'.format(config['plot_savepath'], party, 'line_plot.png'),
                  '{0:s}{1:s}_{2:s}'.format(config['plot_savepath'], party, '2d_axis_plot.png')
                  )
-
-
-if __name__ == '__main__':
-    main(CONFIG)

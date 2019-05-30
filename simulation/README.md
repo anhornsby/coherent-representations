@@ -23,7 +23,7 @@ matplotlib>=2.2.2
 To run the simulation, please run the following command using Python 2.7:
 
 ```bash
-python simulate.py
+python ./
 ```
 
 Note that the main parameters of the simulation can be modified using the `CONFIG` object within `simulate.py`.
