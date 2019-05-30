@@ -1,5 +1,5 @@
-# Shameless copy paste from tj/luna project
-# https://github.com/tj/luna/blob/master/Makefile
+# Run make to build the docker container 
+# Ensure that you have downloaded experiment data from OSF
 
 build:
 	docker build ./ -t adamnhornsby/coherent-representations
