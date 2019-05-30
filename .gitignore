@@ -1,0 +1,10 @@
+data/
+*.pyc
+*.csv
+*.eps
+*.png
+*.pdf
+.cache
+.config
+*.DS_Store
+*.bash_history
