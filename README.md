@@ -1,4 +1,4 @@
-# How Decisions and the Desire for Coherency ShapeSubjective Preferences Over Time
+# How Decisions and the Desire for Coherency Shape Subjective Preferences Over Time
 Adam Hornsby & Brad Love, 2019
 
 This repository contains all code files necessary to recreate the analyses and plots in the paper. 
