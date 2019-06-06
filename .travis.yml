@@ -14,7 +14,8 @@ jobs:
   include:
     - stage: build
       install:
-        - pip install osfclient
+        - pip install --user -U pip
+        - pip install --user osfclient
       script: 
         # pull the data from public osf repo
         - export OSF_PROJECT=5bvmp
@@ -28,7 +29,8 @@ jobs:
         - docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations simulation /usr/local/data/
     - stage: deploy
       install:
-        - pip install osfclient
+        - pip install --user -U pip
+        - pip install --user osfclient
       script: 
         # pull the data from public osf repo
         - pip install osfclient
