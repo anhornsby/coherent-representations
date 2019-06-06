@@ -25,10 +25,8 @@ jobs:
       script: 
         # pull the data from public osf repo
         - export OSF_PROJECT=tsymx # TODO: change after testing!
-        - echo $OSF_USERNAME
-        - export $OSF_USERNAME
-        - export $OSF_PASSWORD
         # note that secure environment variables are set within travis
+        - osf list
         - osf clone
         - mv 5bvmp/osfstorage/data/ ./
         - rmdir 5bvmp # tidy up folderjunk
