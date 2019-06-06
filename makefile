@@ -3,3 +3,6 @@
 
 build:
 	docker build ./ -t adamnhornsby/coherent-representations
+
+deploy:
+	docker push adamnhornsby/coherent-representations

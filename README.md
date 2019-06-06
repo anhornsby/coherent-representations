@@ -10,14 +10,16 @@ There is also an accompanying Docker container, which can be used to be recreate
 There were three main parts of analyses:
 
 1. `simulation` - A simulation to demonstrate how the intrinsic desire to maximize coherency can elicit strong subjective preferences in retrospect of one's choices.
-2. `robots` - We provide code capable of analysing results from the two experiments. Chiefly, the experiment reported in the main text. Also, the re-run, which was the same, with the added political question at the end (see supplemental of paper for details).
+2. `robots` - Code for recreating analyses in Experiment, and the replication documented in the supplemental.
 3. `politics` - Codes to analyse the results from the political beliefs experiment.
+
+Please see the paper for more information.
 
 ## Running the codes
 
 You can either choose to run these codes with or without the Docker container. Only running with guarantees reproducibility. 
 
-### Preparing Docker
+### Running the analyses with Docker
 
 If you are using Docker, pull the container using:
 
@@ -25,9 +27,9 @@ If you are using Docker, pull the container using:
 docker pull adamnhornsby/coherent-representations
 ```
 
-#### Running the analyses in container
+#### Running the analyses
 
-**Note that all of the following commands will output plots to your current working directory**
+Note that all of the following commands will output plots to your current working directory
 
 The main reported results will be printed to stdout.
 
@@ -59,7 +61,7 @@ python ~/data/politics/effect_size_plot.py
 Rscript ~/politics/anova.R ~/data/politics/politics_data.csv /usr/local/data/
 ```
 
-### Environment preparation when not running 
+### Running the analyses without Docker
 
 If you are not using Docker, please:
 

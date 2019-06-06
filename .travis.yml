@@ -1,0 +1,37 @@
+# build and deploy container to dockerhub
+
+services:
+  - docker
+
+stages:
+  - build
+  - name: deploy
+    if: branch = master
+
+jobs:
+  include:
+    - stage: build
+      script: 
+        # pull the data from public osf repo
+        - pip install osfclient
+        - export OSF_PROJECT=5bvmp
+        - osf clone
+        - mv 5bvmp/osfstorage/data/ ./
+        - rmdir 5bvmp # tidy up folderjunk
+        # now lets build the container
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - make build
+        # now test that it works by running the simulation
+        - docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations simulation /usr/local/data/
+    - stage: deploy
+      script: 
+        # pull the data from public osf repo
+        - pip install osfclient
+        - export OSF_PROJECT=5bvmp
+        - osf clone
+        - mv 5bvmp/osfstorage/data/ ./
+        - rmdir 5bvmp # tidy up folderjunk
+        # build and deploy the container image to dockerhub
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - make build
+        - make deploy
