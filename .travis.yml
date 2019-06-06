@@ -8,7 +8,8 @@ stages:
   - name: deploy
     if: branch = master
 
-sudo: enabled
+sudo: required
+dist: xenial
 
 addons:
   apt:
@@ -23,7 +24,7 @@ jobs:
         - pip install --user osfclient
       script: 
         # pull the data from public osf repo
-        - export OSF_PROJECT=5bvmp
+        - export OSF_PROJECT=tsymx # TODO: change after testing!
         - osf clone
         - mv 5bvmp/osfstorage/data/ ./
         - rmdir 5bvmp # tidy up folderjunk
@@ -39,7 +40,7 @@ jobs:
       script: 
         # pull the data from public osf repo
         - pip install osfclient
-        - export OSF_PROJECT=5bvmp
+        - export OSF_PROJECT=tsymx
         - osf clone
         - mv 5bvmp/osfstorage/data/ ./
         - rmdir 5bvmp # tidy up folderjunk
