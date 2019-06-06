@@ -8,6 +8,8 @@ stages:
   - name: deploy
     if: branch = master
 
+sudo: enabled
+
 jobs:
   include:
     - stage: build
