@@ -13,9 +13,10 @@ sudo: enabled
 jobs:
   include:
     - stage: build
+      install:
+        - pip install osfclient
       script: 
         # pull the data from public osf repo
-        - pip install osfclient
         - export OSF_PROJECT=5bvmp
         - osf clone
         - mv 5bvmp/osfstorage/data/ ./
@@ -26,6 +27,8 @@ jobs:
         # now test that it works by running the simulation
         - docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations simulation /usr/local/data/
     - stage: deploy
+      install:
+        - pip install osfclient
       script: 
         # pull the data from public osf repo
         - pip install osfclient
