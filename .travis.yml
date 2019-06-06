@@ -10,6 +10,11 @@ stages:
 
 sudo: enabled
 
+addons:
+  apt:
+    packages:
+      - libssl1.0.0
+
 jobs:
   include:
     - stage: build
