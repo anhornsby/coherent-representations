@@ -2,11 +2,8 @@
 Adam Hornsby & Brad Love, 2019
 
 [![Travis Build Status](https://travis-ci.com/anhornsby/coherent-representations.svg?token=9tuLsSyJNE9sSECQ4whU&branch=master)](https://travis-ci.com/anhornsby/coherent-representations)
-
 [![Docker](https://img.shields.io/badge/Docker-Open%20in%20DockerHub-blue.svg)](https://cloud.docker.com/repository/docker/adamnhornsby/coherent-representations/general)
-
 [![OSF](https://img.shields.io/badge/OSF-View%20data%20on%20OSF-lightgrey.svg)](https://osf.io/5bvmp/)
-
 
 This repository contains all code files necessary to recreate the analyses and plots in the paper. 
 
@@ -24,9 +21,11 @@ Please see the paper for more information.
 
 ## Running the codes
 
-You can either choose to run these codes with or without the Docker container. Only running with guarantees reproducibility. 
+You can either choose to run these codes with or without the Docker container. Only running with Docker guarantees reproducibility. 
 
-### Running the analyses with Docker
+### Docker
+
+#### Pulling the container
 
 If you are using Docker, pull the container using:
 
@@ -68,7 +67,9 @@ python ~/data/politics/effect_size_plot.py
 Rscript ~/politics/anova.R ~/data/politics/politics_data.csv /usr/local/data/
 ```
 
-### Running the analyses without Docker
+### Without Docker
+
+#### Preparing your environment
 
 If you are not using Docker, please:
 
