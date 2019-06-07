@@ -11,10 +11,10 @@ stages:
 sudo: required
 dist: xenial
 
-addons:
-  apt:
-    packages:
-      - libssl1.0.0
+# addons:
+#   apt:
+#     packages:
+#       - libssl1.0.0
 
 jobs:
   include:
@@ -26,7 +26,10 @@ jobs:
         # pull the data from public osf repo
         # note that secure environment variables are set within travis
         - osf list
-        - osf clone
+        - osf fetch data/politics/politics_data.csv data/politics/politics_data.csv
+        - osf fetch data/robots/robots-first/robots_results.csv data/robots/robots-first/robots_results.csv
+        - osf fetch data/robots/robots-rerun/robots_rerun_results.csv data/robots/robots-rerun/robots_rerun_results.csv
+        # - osf clone
         - mv 5bvmp/osfstorage/data/ ./
         - rmdir 5bvmp # tidy up folderjunk
         # now lets build the container
