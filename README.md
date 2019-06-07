@@ -1,6 +1,13 @@
 # How Decisions and the Desire for Coherency Shape Subjective Preferences Over Time
 Adam Hornsby & Brad Love, 2019
 
+[![Travis Build Status](https://travis-ci.com/anhornsby/coherent-representations.svg?token=9tuLsSyJNE9sSECQ4whU&branch=master)](https://travis-ci.com/anhornsby/coherent-representations)
+
+[![Docker](https://img.shields.io/badge/Docker-Open%20in%20DockerHub-blue.svg)](https://cloud.docker.com/repository/docker/adamnhornsby/coherent-representations/general)
+
+[![OSF](https://img.shields.io/badge/OSF-View%20data%20on%20OSF-lightgrey.svg)](https://osf.io/5bvmp/)
+
+
 This repository contains all code files necessary to recreate the analyses and plots in the paper. 
 
 There is also an accompanying Docker container, which can be used to be recreate the results in a controlled environment.
