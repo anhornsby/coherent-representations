@@ -29,7 +29,7 @@ jobs:
         - osf fetch data/robots/robots-first/robots_results.csv data/robots/robots-first/robots_results.csv
         - osf fetch data/robots/robots-rerun/robots_rerun_results.csv data/robots/robots-rerun/robots_rerun_results.csv
         # now lets build the container
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - make build
         # now test that it works by running the simulation
         - docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations simulation /usr/local/data/
