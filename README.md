@@ -57,14 +57,10 @@ To run the robot experiment re-run:
 docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations robots_rerun /usr/local/data/
 ```
 
-To run the politics experiment analyses (note this also requires R and the Rfit package):
+To run the politics experiment analyses:
 
 ```
 docker run -v ${PWD}:/usr/local/data/ -it adamnhornsby/coherent-representations politics /usr/local/data/
-
-python ~/data/politics/effect_size_plot.py
-
-Rscript ~/politics/anova.R ~/data/politics/politics_data.csv /usr/local/data/
 ```
 
 ### Without Docker
